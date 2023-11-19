@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe4ce5eb01d7bd743b20856bc58b4e35
+guid: fa6a1993771c04087a36c3485801ad01
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,54 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OLD IDLE_0
+      name: TEEN PUSH_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 4
-        width: 14
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be4335558b50ea946960bbdadd68b582
-      internalID: -1357904252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OLD IDLE_1
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 4
-        width: 14
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1464e46305ae594f82968e5b0b586f4
-      internalID: -2117876355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OLD IDLE_2
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 4
-        width: 14
+        x: 0
+        y: 0
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b45c6bf3eeab3594db6c35e476c9ed6a
-      internalID: 1631196855
+      spriteID: 86021f05458dc4f5fa628c51ba66d900
+      internalID: 307227340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OLD IDLE_3
+      name: TEEN PUSH_1
       rect:
         serializedVersion: 2
-        x: 109
-        y: 4
-        width: 14
+        x: 32
+        y: 0
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -187,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3581af509b675442b71367bc40725cd
-      internalID: 520763325
+      spriteID: 380b4bb150e374c9fbcfad8b5f452717
+      internalID: -295950284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OLD IDLE_4
+      name: TEEN PUSH_2
       rect:
         serializedVersion: 2
-        x: 143
-        y: 4
-        width: 14
+        x: 64
+        y: 0
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -208,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f66d3e9d190128645bc254e0c610ffc0
-      internalID: 1838181215
+      spriteID: e5b60a0c3c9a84d27bddd8ed7872f2df
+      internalID: 1792189561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OLD IDLE_5
+      name: TEEN PUSH_3
       rect:
         serializedVersion: 2
-        x: 177
-        y: 4
-        width: 14
-        height: 31
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +187,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 546915bff24c22341a21e72a811be8ce
-      internalID: 1706854419
+      spriteID: 4158610ab6e12455d8808c45df0c881f
+      internalID: -103047381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEEN PUSH_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff79d802284b4eeb98bc31ff10527da
+      internalID: 1311572944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEEN PUSH_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da743ab2ff5c64d80882f051ac54b469
+      internalID: 544208748
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      OLD IDLE_0: -1357904252
-      OLD IDLE_1: -2117876355
-      OLD IDLE_2: 1631196855
-      OLD IDLE_3: 520763325
-      OLD IDLE_4: 1838181215
-      OLD IDLE_5: 1706854419
+      TEEN PUSH_0: 307227340
+      TEEN PUSH_1: -295950284
+      TEEN PUSH_2: 1792189561
+      TEEN PUSH_3: -103047381
+      TEEN PUSH_4: 1311572944
+      TEEN PUSH_5: 544208748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

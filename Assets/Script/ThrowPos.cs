@@ -16,6 +16,6 @@ public class ThrowPos : MonoBehaviour
     {
         Vector3 screenPos = Camera.main.WorldToScreenPoint(Input.mousePosition) - transform.position;
         float rotz = Mathf.Atan2(screenPos.y, screenPos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rotz + offset);
+        transform.rotation = Quaternion.Euler(0f, 0f, (rotz + offset) * playerMovement.instance.faceCheck);
     }
 }

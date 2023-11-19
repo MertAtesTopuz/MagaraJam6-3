@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe4ce5eb01d7bd743b20856bc58b4e35
+guid: 2c412af0b210b4659b117aa91e4c084f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OLD IDLE_0
+      name: MAN RUN_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 4
-        width: 14
+        x: 224
+        y: 2
+        width: 25
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be4335558b50ea946960bbdadd68b582
-      internalID: -1357904252
+      spriteID: 8cc757a31c44c4557a777f71fcf1d7ca
+      internalID: -2022217595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OLD IDLE_1
+      name: MAN RUN_1
       rect:
         serializedVersion: 2
-        x: 41
-        y: 4
-        width: 14
+        x: 4
+        y: 1
+        width: 25
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,82 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1464e46305ae594f82968e5b0b586f4
-      internalID: -2117876355
+      spriteID: 0c3d737014b9242159bd00268b275076
+      internalID: 1930978560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OLD IDLE_2
+      name: MAN RUN_2
       rect:
         serializedVersion: 2
-        x: 75
-        y: 4
-        width: 14
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b45c6bf3eeab3594db6c35e476c9ed6a
-      internalID: 1631196855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OLD IDLE_3
-      rect:
-        serializedVersion: 2
-        x: 109
-        y: 4
-        width: 14
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3581af509b675442b71367bc40725cd
-      internalID: 520763325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OLD IDLE_4
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 4
-        width: 14
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f66d3e9d190128645bc254e0c610ffc0
-      internalID: 1838181215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OLD IDLE_5
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 4
-        width: 14
+        x: 40
+        y: 1
+        width: 25
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -229,8 +166,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 546915bff24c22341a21e72a811be8ce
-      internalID: 1706854419
+      spriteID: 8beab79ab09d64833bd4a14fd989efce
+      internalID: 1498034601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MAN RUN_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5f3525c81cb40edac5979bd44cf200
+      internalID: -1807610684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MAN RUN_4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8344ef6ef4d4ad59e5460e3662985d
+      internalID: 2008285459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MAN RUN_5
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 3
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c16965fc575445c78a39693b6f4848c
+      internalID: 1147153900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MAN RUN_6
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 2
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49662ed03459a4688a501d9dae8efdf9
+      internalID: 1070580477
       vertices: []
       indices: 
       edges: []
@@ -246,12 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      OLD IDLE_0: -1357904252
-      OLD IDLE_1: -2117876355
-      OLD IDLE_2: 1631196855
-      OLD IDLE_3: 520763325
-      OLD IDLE_4: 1838181215
-      OLD IDLE_5: 1706854419
+      MAN RUN_0: -2022217595
+      MAN RUN_1: 1930978560
+      MAN RUN_2: 1498034601
+      MAN RUN_3: -1807610684
+      MAN RUN_4: 2008285459
+      MAN RUN_5: 1147153900
+      MAN RUN_6: 1070580477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
