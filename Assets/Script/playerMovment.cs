@@ -99,7 +99,7 @@ public class playerMovement : MonoBehaviour {
         }
     }
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "OneWayPlatform") {
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "OneWayPlatform" || collision.gameObject.tag == "Box") {
             playerAnimator.SetBool("Jumping", false);
             isJumping = false;          
         }
@@ -113,7 +113,7 @@ public class playerMovement : MonoBehaviour {
         }
     }
     private void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "OneWayPlatform") {
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "OneWayPlatform" || collision.gameObject.tag == "Box") {
             isJumping = true;
         }
         if (collision.gameObject.tag == "Wall") {
