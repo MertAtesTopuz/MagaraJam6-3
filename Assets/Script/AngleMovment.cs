@@ -12,6 +12,8 @@ public class AngleMovment : MonoBehaviour
     [SerializeField] float intensityAmount = 1.0f;
     [SerializeField] float openLightAmount = 1.0f;
 
+    bool angleCanMove = false;
+
     Animator animator;
     Light2D light2DEdit;
     void Start() {
@@ -23,10 +25,11 @@ public class AngleMovment : MonoBehaviour
 
     }
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Player")) {
+        if (collision.gameObject.CompareTag("Player") && angleCanMove == false) {
             angle.transform.position = angleWillGo;
             animator.SetTrigger("Attack");
             light2DEdit.intensity = intensityAmount;
+            angleCanMove = true;
             StartCoroutine(OpenLightDelay());
         }
     }
