@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe4ce5eb01d7bd743b20856bc58b4e35
+guid: aefec99a5b94e4ca3ae9e77438f83154
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,54 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OLD IDLE_0
+      name: WALL CLIMB_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 4
-        width: 14
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be4335558b50ea946960bbdadd68b582
-      internalID: -1357904252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OLD IDLE_1
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 4
-        width: 14
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1464e46305ae594f82968e5b0b586f4
-      internalID: -2117876355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OLD IDLE_2
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 4
-        width: 14
+        x: 0
+        y: 0
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b45c6bf3eeab3594db6c35e476c9ed6a
-      internalID: 1631196855
+      spriteID: abcad487d486d41f9aff3d2b7da88682
+      internalID: -599207803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OLD IDLE_3
+      name: WALL CLIMB_1
       rect:
         serializedVersion: 2
-        x: 109
-        y: 4
-        width: 14
+        x: 32
+        y: 0
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -187,50 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3581af509b675442b71367bc40725cd
-      internalID: 520763325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OLD IDLE_4
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 4
-        width: 14
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f66d3e9d190128645bc254e0c610ffc0
-      internalID: 1838181215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OLD IDLE_5
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 4
-        width: 14
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 546915bff24c22341a21e72a811be8ce
-      internalID: 1706854419
+      spriteID: 35642fd7d77134cc49235b2de24eb2b6
+      internalID: -297253904
       vertices: []
       indices: 
       edges: []
@@ -246,12 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      OLD IDLE_0: -1357904252
-      OLD IDLE_1: -2117876355
-      OLD IDLE_2: 1631196855
-      OLD IDLE_3: 520763325
-      OLD IDLE_4: 1838181215
-      OLD IDLE_5: 1706854419
+      WALL CLIMB_0: -599207803
+      WALL CLIMB_1: -297253904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
