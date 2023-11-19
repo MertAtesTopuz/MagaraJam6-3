@@ -212,7 +212,7 @@ public class playerMovement : MonoBehaviour {
         playerRigidbody.velocity = Vector2.zero;
     }
     IEnumerator RestartLvl() {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.4f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
