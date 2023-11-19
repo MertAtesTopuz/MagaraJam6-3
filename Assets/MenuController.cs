@@ -5,14 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    public static MenuController instance;
+     
     [Header("UIPages")]
     public GameObject settingsScreen;
     public GameObject creditsScreen;
     public GameObject mainScreen;
 
+    public GameObject uI;
+
+    public bool uIFalse = false;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public void Play()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        uI.SetActive(false);
+        uIFalse = true;
     }
 
     public void Quit()
