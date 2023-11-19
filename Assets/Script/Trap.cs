@@ -9,4 +9,9 @@ public class Trap : MonoBehaviour
             collision.gameObject.GetComponent<playerMovement>().Die();
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Player") {
+            collision.gameObject.GetComponent<playerMovement>().Die();
+        }
+    }
 }
