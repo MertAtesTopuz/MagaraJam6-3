@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class PlayerOWP : MonoBehaviour
 {
+    public static PlayerOWP instance;
+
     private GameObject currentOneWayPlatform;
 
     private CapsuleCollider2D playerCol;
+
+    public bool platTry;
+
+    private void Awake() {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -15,7 +23,7 @@ public class PlayerOWP : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && platTry == true)
         {
             if (currentOneWayPlatform != null)
             {
