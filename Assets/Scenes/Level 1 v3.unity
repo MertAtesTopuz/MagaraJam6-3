@@ -32644,6 +32644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box
       objectReference: {fileID: 0}
+    - target: {fileID: 4870410151666754942, guid: 096e866a66c6b4a1888bd7ed884da39c, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6541868094223356054, guid: 096e866a66c6b4a1888bd7ed884da39c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8043
