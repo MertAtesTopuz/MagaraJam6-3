@@ -33,12 +33,12 @@ public class MovingButtonPlatform : MonoBehaviour
 
     IEnumerator WaitTime1()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         nextPos = secondPos.position;
     }
     IEnumerator WaitTime2()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         nextPos = firstPos.position;
     }
 
