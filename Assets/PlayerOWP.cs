@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerOWP : MonoBehaviour
 {
     public static PlayerOWP instance;
@@ -30,6 +30,11 @@ public class PlayerOWP : MonoBehaviour
                 StartCoroutine(DisableCollision());
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -56,4 +61,5 @@ public class PlayerOWP : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         Physics2D.IgnoreCollision(playerCol, platformCollider, false);
     }
+
 }
