@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -8,30 +9,36 @@ public class playerMovement : MonoBehaviour {
 
     public static playerMovement instance;
 
+    [Header("Main Variables")]
+    CapsuleCollider2D playerBodyCollider;
+    Animator playerAnimator;
+    Rigidbody2D playerRigidbody;
+
+    [Header("Movement")]
     [SerializeField] float playerSpeed = 1f;
+    public float faceCheck = 1f;
+    private bool moveCheck;
+
+    [Header("Jump")]
     public float playerJumpSpeed = 1f;
-    [SerializeField] float wallJumpingDuration = 0.4f;
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] GameObject checkPos;
     [SerializeField] float checkRad;
+    bool isGround;
+    private bool jumpCheck;
+
+    [Header("Wall")]
+    [SerializeField] float wallJumpingDuration = 0.4f;
     [SerializeField] float wallSlidingSpeed = 1f;
     [SerializeField] float wallJumpingTime = 0.2f;
     [SerializeField] Vector2 wallJumpingPower = new Vector2(8f, 16f);
-    [SerializeField] GameObject checkPos;
-    [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform wallCheck;
     [SerializeField] LayerMask wallLayer;
 
     public bool crouchCheck = false;
 
     Vector2 movePlayerInput;
-    CapsuleCollider2D playerBodyCollider;
-    Animator playerAnimator;
-    Rigidbody2D playerRigidbody;
-
-    private bool moveCheck;
-    private bool jumpCheck;
-    public float faceCheck = 1f;
-
-    bool isGround;
+    
     bool isWallSliding;
     bool isFacingRight = true;
     bool isWallJumping;
@@ -98,6 +105,7 @@ public class playerMovement : MonoBehaviour {
             }
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "OneWayPlatform" || collision.gameObject.tag == "Box") {
             playerAnimator.SetBool("Jumping", false);
@@ -111,7 +119,13 @@ public class playerMovement : MonoBehaviour {
             playerAnimator.SetBool("pushing", true);
             isPushing = true;
         }
+        else
+        {
+            playerAnimator.SetBool("pushing", false);
+            isPushing = false;
+        }
     }
+
     private void OnCollisionExit2D(Collision2D collision) {
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "OneWayPlatform" || collision.gameObject.tag == "Box") {
             isJumping = true;
@@ -124,6 +138,7 @@ public class playerMovement : MonoBehaviour {
             isPushing = false;
         }
     }
+
     void FlipPlayerFace() {
         bool playerFlip = Mathf.Abs(playerRigidbody.velocity.x) > Mathf.Epsilon;
         if (playerFlip) {
@@ -134,8 +149,9 @@ public class playerMovement : MonoBehaviour {
     void PlayerRun() {
         Vector2 playerMovment = new Vector2(movePlayerInput.x * playerSpeed, playerRigidbody.velocity.y);
         playerRigidbody.velocity = playerMovment;
-        bool playerRunning = Mathf.Abs(playerRigidbody.velocity.x) > Mathf.Epsilon;
-        if (jumpCheck == false && crouchCheck == false) {
+       bool playerRunning = playerMovment.x != 0f;
+       
+        if ( crouchCheck == false) {
             playerAnimator.SetBool("Running", playerRunning);
         }
 
@@ -145,20 +161,11 @@ public class playerMovement : MonoBehaviour {
         }
     }
 
-    bool IsGrounded() {
-        Vector2 raycastOrigin = new Vector2(playerRigidbody.position.x, playerRigidbody.position.y - playerBodyCollider.bounds.extents.y - 0.01f);
-        Vector2 raycastDirection = Vector2.down;
-        float raycastDistance = 0.01f;
-
-        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, raycastDirection, raycastDistance, LayerMask.GetMask("Ground"));
-        return hit.collider != null;
-    }
-
-     bool IsWalled() {
+    bool IsWalled() {
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }
 
-     void WallSlide() {
+    void WallSlide() {
         if (IsWalled() && !isGround && movePlayerInput.x != 0f) {
             isWallSliding = true;
             playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, Mathf.Clamp(playerRigidbody.velocity.y, -wallSlidingSpeed, float.MaxValue));
@@ -167,7 +174,7 @@ public class playerMovement : MonoBehaviour {
         }
     }
 
-     void WallJump() {
+    void WallJump() {
         if (isWallSliding) {
             isWallJumping = false;
             wallJumpingDirection = -transform.localScale.x;
@@ -192,10 +199,12 @@ public class playerMovement : MonoBehaviour {
             Invoke(nameof(StopWallJumping), wallJumpingDuration);
         }
     }
-     void StopWallJumping() {
+
+    void StopWallJumping() {
         isWallJumping = false;
     }
-     void Flip() {
+
+    void Flip() {
         if (isFacingRight && movePlayerInput.x < 0f || !isFacingRight && movePlayerInput.x > 0f) {
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
@@ -204,13 +213,23 @@ public class playerMovement : MonoBehaviour {
             faceCheck *= -1f;
         }
     }
+
     public void Die() {
         DisablePlayer();
         StartCoroutine(RestartLvl());
     }
+
     public void DisablePlayer() {
         playerRigidbody.velocity = Vector2.zero;
     }
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawSphere(checkPos.transform.position, checkRad);
+    }
+
     IEnumerator RestartLvl() {
         yield return new WaitForSeconds(0.4f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
